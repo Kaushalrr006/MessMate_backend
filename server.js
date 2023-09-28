@@ -25,4 +25,4 @@ mongoose
 
 // app.use(routes)
 
-app.listen(PORT, () => console.log('listening on port 5000'))
+app.listen(PORT, () => console.log('listening on port 3000'))
