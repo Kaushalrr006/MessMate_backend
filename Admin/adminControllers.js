@@ -13,7 +13,7 @@ module.exports.createCard = async (req, res) => {
     const { id, name, description, date, dishes } = req.body;
   
     try {
-      const newCard = new Card({
+      const newCard =  new AllCards({
         id,
         name,
         description,
