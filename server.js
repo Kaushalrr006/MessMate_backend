@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const routes = require('./Admin/adminRoutes')
+const profileroutes = require('./Profile/profleRoutes')
+
 const env = require('./.env')
 
 require('dotenv').config()
@@ -21,8 +23,12 @@ mongoose
   .catch((err) => console.log(err))
 
   const adminRoutes = require('./Admin/adminRoutes'); 
+  const Profileroutes = require('./Profile/profleRoutes')
+
   app.use(adminRoutes);
+  app.use(Profileroutes);
 
 app.use(routes)
+app.use(profileroutes)
 
 app.listen(PORT, () => console.log('listening on port 3000'))
